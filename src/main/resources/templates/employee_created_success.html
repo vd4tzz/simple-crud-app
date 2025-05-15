@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Success</title>
+    <style>
+        .success-message {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 1.5rem;
+            background-color: #e6ffed;
+            border: 1px solid #b7eb8f;
+            color: #237804;
+            font-family: sans-serif;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 1rem;
+            text-decoration: none;
+            color: #1890ff;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<div class="success-message">
+    <h2>Employee created successfully!</h2>
+    <p>
+        Id: <span th:text="${employee.id}"></span><br>
+        Name: <span th:text="${employee.name}"></span>
+    </p>
+    <a class="back-link" th:href="@{/employees}">← Back to Employee List</a>
+</div>
+</body>
+</html>

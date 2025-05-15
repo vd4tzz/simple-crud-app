@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 2rem;
+    color: #333;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    color: #007bff;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    text-decoration: none;
+}
+
+.back-button:hover {
+    text-decoration: underline;
+    color: #0056b3; /* màu đậm hơn một chút khi hover */
+}
+
+.title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.sub-title {
+    font-size: 1rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.employee-form {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.employee-form__section {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.employee-form__field {
+    flex: 1 1 100%;
+    min-width: 100px;
+}
+
+.employee-form__field--vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.employee-form__field--horizontal {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+}
+
+.employee-form__label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.employee-form__input,
+.employee-form__value,
+.employee-form__radio-input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.employee-form__input--narrow {
+    max-width: 50px;
+    text-align: center;
+}
+
+.employee-form__value {
+    resize: vertical;
+    min-height: 80px;
+}
+
+
+.employee-form__label--no-margin-bottom {
+    margin-bottom: 0;
+}
+
+.employee-form__radio-label {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 1rem;
+    font-weight: normal;
+}
+
+.employee-form__radio-input {
+    margin-right: 0.5rem;
+}
+
+.employee-form__button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.employee-form__button:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,73 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 2rem;
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.title {
+    color: #e53935;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.employee-info {
+    margin-bottom: 2rem;
+}
+
+.employee-info__item {
+    margin: 0.75rem 0;
+    font-size: 1rem;
+}
+
+.employee-info__label {
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.actions__button,
+.actions__link {
+    padding: 0.6rem 1.4rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.actions__button {
+    background-color: #e53935;
+    color: white;
+    border: none;
+}
+
+.actions__button:hover {
+    background-color: #c62828;
+}
+
+.actions__link {
+    border: 1px solid #90a4ae;
+    color: #37474f;
+}
+
+.actions__link:hover {
+    background-color: #90a4ae;
+    color: white;
+}

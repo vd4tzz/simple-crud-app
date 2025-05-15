@@ -1,0 +1,129 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f5f9;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.employee-card-container {
+    max-width: 1000px;
+    margin: auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+.employee-card-container__functions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.employee-card-container__pagination {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.employee-card-container__pagination__inc,
+.employee-card-container__pagination__dec,
+.employee-card-container__pagination__num-page {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #cbd5e1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #f8fafc;
+    font-weight: bold;
+    cursor: default;
+}
+
+.employee-card-container__pagination__inc,
+.employee-card-container__pagination__dec {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.employee-card-container__pagination__inc:hover,
+.employee-card-container__pagination__dec:hover {
+    background-color: #e2e8f0;
+}
+
+.employee-card-container__addBtn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.employee-card-container__addBtn:hover {
+    background-color: #004793;
+}
+
+.employee-card-container__cards {
+    overflow-y: auto;
+    max-height: 620px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.employee-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+.employee-card__section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 10px;
+}
+
+.employee-card__field {
+    flex: 1;
+    font-size: 15px;
+}
+
+.employee-card__field strong {
+    color: #334155;
+    margin-right: 5px;
+}
+
+.employee-card__update-delete {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.employee-card__update-delete__update-btn,
+.employee-card__update-delete__delete-btn {
+    width: 36px;
+    height: 36px;
+    border: none;
+    background-color: #e2e8f0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+
+.employee-card__update-delete__update-btn:hover,
+.employee-card__update-delete__delete-btn:hover {
+    background-color: #cbd5e1;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirm Deletion</title>
+    <link rel="stylesheet" th:href="@{/css/delete_employee.css}">
+    <style>
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2 class="title">Are you sure you want to delete this employee?</h2>
+
+    <div class="employee-info">
+        <p class="employee-info__item"><span class="employee-info__label">ID:</span> <span th:text="${employee.id}"></span></p>
+        <p class="employee-info__item"><span class="employee-info__label">Name:</span> <span th:text="${employee.name}"></span></p>
+        <p class="employee-info__item"><span class="employee-info__label">Email:</span> <span th:text="${employee.email}"></span></p>
+        <p class="employee-info__item"><span class="employee-info__label">DOB:</span> <span th:text="${#dates.format(employee.dob, 'yyyy-MM-dd')}"></span></p>
+        <p class="employee-info__item"><span class="employee-info__label">Gender:</span> <span th:text="${employee.gender}"></span></p>
+        <p class="employee-info__item"><span class="employee-info__label">Address:</span> <span th:text="${employee.address}"></span></p>
+        <p class="employee-info__item"><span class="employee-info__label">Phone:</span> <span th:text="${employee.phone}"></span></p>
+    </div>
+
+    <form th:action="@{/delete-employee}" method="post" class="actions">
+        <input type="hidden" name="id" th:value="${employee.id}"/>
+        <button type="submit" class="actions__button">Delete</button>
+        <a th:href="@{/employees}" class="actions__link">Cancel</a>
+    </form>
+</div>
+</body>
+</html>

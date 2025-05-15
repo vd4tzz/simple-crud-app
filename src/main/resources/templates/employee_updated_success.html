@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Update Successful</title>
+  <link rel="stylesheet" th:href="@{/css/employee_updated_success.css}">
+</head>
+<body>
+<div class="update-success">
+  <div class="update-success__card">
+    <h1 class="update-success__title">Employee Updated Successfully ✔</h1>
+
+    <div class="update-success__info">
+
+      <p class="update-success__info-group">
+        <span class="update-success__label">ID:</span>
+        <span th:text="${employee.id}"></span>
+      </p>
+
+      <p class="update-success__info-group">
+        <span class="update-success__label">Name:</span>
+        <span th:text="${employee.name}"></span>
+        <span th:if="${!employee.name.equals(oldEmployee.name)}" class="update-success__old-value">
+          (<span th:text="${oldEmployee.name}"></span>)
+        </span>
+      </p>
+
+      <p class="update-success__info-group">
+        <span class="update-success__label">Email:</span>
+        <span th:text="${employee.email}"></span>
+        <span th:if="${!employee.email.equals(oldEmployee.email)}" class="update-success__old-value">
+          (<span th:text="${oldEmployee.email}"></span>)
+        </span>
+      </p>
+
+      <p class="update-success__info-group">
+        <span class="update-success__label">Date of Birth:</span>
+        <span th:text="${employee.dob}"></span>
+        <span th:if="${!employee.dob.equals(oldEmployee.dob)}" class="update-success__old-value">
+          (<span th:text="${oldEmployee.dob}"></span>)
+        </span>
+      </p>
+
+      <p class="update-success__info-group">
+        <span class="update-success__label">Gender:</span>
+        <span th:text="${employee.gender}"></span>
+        <span th:if="${!employee.gender.equals(oldEmployee.gender)}" class="update-success__old-value">
+          (<span th:text="${oldEmployee.gender}"></span>)
+        </span>
+      </p>
+
+      <p class="update-success__info-group">
+        <span class="update-success__label">Address:</span>
+        <span th:text="${employee.address}"></span>
+        <span th:if="${!employee.address.equals(oldEmployee.address)}" class="update-success__old-value">
+          (<span th:text="${oldEmployee.address}"></span>)
+        </span>
+      </p>
+
+      <p class="update-success__info-group">
+        <span class="update-success__label">Phone:</span>
+        <span th:text="${employee.phone}"></span>
+        <span th:if="${!employee.phone.equals(oldEmployee.phone)}" class="update-success__old-value">
+          (<span th:text="${oldEmployee.phone}"></span>)
+        </span>
+      </p>
+
+    </div>
+
+    <a class="update-success__back-link" th:href="@{/employees}">← Back to Employee List</a>
+  </div>
+</div>
+</body>
+</html>

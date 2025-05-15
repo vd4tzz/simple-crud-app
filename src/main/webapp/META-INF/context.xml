@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+    <Resource
+        name="jdbc/OracleDB"
+        auth="Container"
+        type="javax.sql.DataSource"
+        maxTotal="5"
+        maxWaitMillis="10000"
+        username="c##dat"
+        password="1"
+        driverClassName="oracle.jdbc.OracleDriver"
+        url="jdbc:oracle:thin:@localhost:1521:free"
+
+        testOnBorrow="true"
+        validationQuery="SELECT 1"
+    />
+
+
+<!--    <Resource name="BeanManager"-->
+<!--              auth="Container"-->
+<!--              type="jakarta.enterprise.inject.spi.BeanManager"-->
+<!--              factory="org.jboss.weld.resources.ManagerObjectFactory" />-->
+</Context>

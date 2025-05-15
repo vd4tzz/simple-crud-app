@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../webapp/css/employee_form.css" />
+    <link rel="stylesheet" th:href="@{/css/employee_form.css}"/>
+</head>
+<body>
+    <a class="back-button" th:href="@{/employees}">< Back</a>
+
+    <h1 class="title" th:text="${title}">Add New Employee</h1>
+    <p class="sub-title" th:text="${sub_title}">Please fill in the form below to register a new employee.</p>
+
+    <form class="employee-form" th:action="${employee.id == 0} ? @{/add-employee} : @{/update-employee}" th:method="POST">
+        <div class="employee-form__section">
+            <div class="employee-form__field employee-form__field--horizontal">
+                <label class="employee-form__label employee-form__label--no-margin-bottom" for="id">Id: </label>
+                <input class="employee-form__input employee-form__input--narrow "
+                       type="text" id="id" placeholder="id" name="id" readonly
+                       th:value="${employee.id == 0 ? '' : employee.id}"
+                />
+            </div>
+        </div>
+
+        <div class="employee-form__section">
+            <div class="employee-form__field employee-form__field--vertical">
+                <label class="employee-form__label" for="name">Name: </label>
+                <input class="employee-form__input"
+                       type="text" id="name" placeholder="Name" name="name" required
+                       th:value="${employee.name}"
+                />
+            </div>
+
+            <div class="employee-form__field employee-form__field--vertical">
+                <label class="employee-form__label" for="dob">Dob: </label>
+                <input class="employee-form__input"
+                       type="date" id="dob" placeholder="Date of Birth" name="dob" required
+                       th:value="${employee.dob}"
+                />
+            </div>
+        </div>
+
+        <div class="employee-form__section">
+            <div class="employee-form__field employee-form__field--vertical">
+                <label class="employee-form__label" for="email">Email: </label>
+                <input class="employee-form__input"
+                       type="email" id="email" placeholder="Email" name="email" required
+                       th:value="${employee.email}"
+                />
+            </div>
+
+            <div class="employee-form__field employee-form__field--vertical">
+                <label class="employee-form__label" for="phone">Phone: </label>
+                <input class="employee-form__input"
+                       type="text" id="phone" placeholder="Phone" name="phone" required
+                       th:value="${employee.phone}"
+                />
+            </div>
+        </div>
+
+        <div class="employee-form__section">
+            <div class="employee-form__field employee-form__field--vertical">
+                <label class="employee-form__label" for="address">Address: </label>
+                <textarea class="employee-form__input"
+                          id="address" placeholder="Address" rows="2" name="address" required
+                          th:text="${employee.address}">
+                </textarea>
+            </div>
+        </div>
+
+
+        <div class="employee-form__section ">
+            <div class="employee-form__field employee-form__field--horizontal">
+                <label class="employee-form__label employee-form__label--no-margin-bottom">Gender:</label>
+
+                <label class="employee-form__radio-label">
+                    <input
+                        class="employee-form__radio-input"
+                        type="radio"
+                        name="gender"
+                        value="Male"
+                        th:checked="${employee.gender == 'Male'}"
+                        required
+                    />
+                    Male
+                </label>
+
+                <label class="employee-form__radio-label">
+                    <input
+                        class="employee-form__radio-input"
+                        type="radio"
+                        name="gender"
+                        value="Female"
+                        th:checked="${employee.gender == 'Female'}"
+                    />
+                    Female
+                </label>
+
+                <label class="employee-form__radio-label">
+                    <input
+                        class="employee-form__radio-input"
+                        type="radio"
+                        name="gender"
+                        value="Other"
+                        th:checked="${employee.gender == 'Other'}"
+                    />
+                    Other
+                </label>
+            </div>
+        </div>
+
+        <button class="employee-form__button" type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
